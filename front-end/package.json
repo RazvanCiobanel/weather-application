@@ -56,7 +56,7 @@
     "@svgr/plugin-svgo": "^8.1.0",
     "@svgr/webpack": "^8.1.0",
     "@testing-library/dom": "^10.4.0",
-    "css-select": "^5.1.0",
+    "css-select": "^6.0.0",
     "nth-check": "^2.1.1",
     "svgo": "^3.3.2"
   }
