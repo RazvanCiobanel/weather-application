@@ -56,7 +56,7 @@
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@svgr/plugin-svgo": "^8.1.0",
     "@svgr/webpack": "^8.1.0",
-    "@testing-library/dom": "^10.4.0",
+    "@testing-library/dom": "^10.4.1",
     "css-select": "^6.0.0",
     "nth-check": "^2.1.1",
     "svgo": "^4.0.0"
