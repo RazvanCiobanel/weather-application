@@ -1,5 +1,5 @@
 import React from "react";
-import moment from "moment";
+
 
 function HourlyForecast({ handleMouseMv, hourlyForecast }) {
   return (
