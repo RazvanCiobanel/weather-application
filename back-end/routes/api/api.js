@@ -13,6 +13,14 @@ router.get("/local/:lat&:long", async (req, res) => {
   res.json(local_data);
 });
 
+router.get("/local/:city", async (req, res) => {
+  const {params:{city}} = req
+  const location_url = `https://api.weatherapi.com/v1/current.json?key=${weatherKey}&q=${city}&aqi=no`;
+  const location_response = await _fetch(location_url);
+  const location_data = await location_response.json();
+  res.json(location_data);
+});
+
 router.get("/world/:city", async (req, res) => {
   const {params:{city}} = req
   const location_url = `https://api.weatherapi.com/v1/current.json?key=${weatherKey}&q=${city}&aqi=no`;

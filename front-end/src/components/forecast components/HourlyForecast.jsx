@@ -1,7 +1,11 @@
 import React from "react";
-
+import dayjs from "dayjs";
+import isSameOrBefore from "dayjs/plugin/isSameOrBefore"
 
 function HourlyForecast({ handleMouseMv, hourlyForecast }) {
+  
+  const now = dayjs().format('YYYY-MM-DD HH:mm:ss')
+  console.log("day: ", now)
   return (
     <div className="h-forecast" onMouseLeave={handleMouseMv}>
       {hourlyForecast.map((hour) => {
@@ -15,7 +19,7 @@ function HourlyForecast({ handleMouseMv, hourlyForecast }) {
           chance_of_rain,
           chance_of_snow,
         } = hour;
-        if (moment().isBefore(time)) {
+        if (dayjs(now).isSameOrBefore(time)) {
           return (
             <div key={time} className="hgrid-item">
               <p>Time: {time.split(" ")[1]}</p>

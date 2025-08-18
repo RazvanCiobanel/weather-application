@@ -3,7 +3,12 @@ import { useDispatch } from "react-redux";
 import { setLatitude, setLongitude } from "../redux/slices/coordinatesSlice";
 import { loader, showLoader } from "../redux/slices/loaderSlice";
 
+import dayjs from "dayjs";
+
 const Home = () => {
+
+   const now = dayjs()
+    console.log("day: ", now)
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -41,8 +46,7 @@ const Home = () => {
         <ul className="home-list">
           <li>- local weather based on your location;</li>
           <li>
-            - 3 days forecasts for any location and hourly forescasts for each
-            day;
+            - 3 days forecasts for any location 
           </li>
           <li>- and present weather for any location.</li>
         </ul>

@@ -24,7 +24,7 @@ const WorldWeather = () => {
   }, [city]);
 
   const getWeather = async (city) => {
-    const res = await fetch(`/api/world/${city}`);
+    const res = await fetch(`http://localhost:3003/api/world/${city}`);
     if (res.status === 200) {
       const weather = await res.json();
       setWeather(weather);

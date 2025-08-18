@@ -1,5 +1,5 @@
 import React from "react";
-import Moment from "react-moment";
+;
 
 function DailyForecast({
   getHourlyForecast,
@@ -39,9 +39,9 @@ function DailyForecast({
           return (
             <div key={date} className="dgrid-item">
               <p>
-                Day: <Moment format="ddd, Do-MMM-YYYY">{date}</Moment>
+                Day: {date}
               </p>
-              <button
+              {/* <button
                 onClick={() => {
                   getHourlyForecast(date);
                   handleForecast();
@@ -49,7 +49,7 @@ function DailyForecast({
                 className="ww-button forecast-btn"
               >
                 Show hourly forecast
-              </button>
+              </button> */}
               {showDailyForecast && (
                 <>
                   <p>Condition: {text}</p>
